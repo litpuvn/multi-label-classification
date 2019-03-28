@@ -45,6 +45,8 @@ test_x = [x[0].strip() for x in x_test.tolist()]
 
 stop_words = set(stopwords.words('english'))
 
+## http://michelleful.github.io/code-blog/2015/06/20/pipelines/
+## learn feature union to add more features (time, region)
 
 pipeline = Pipeline([
     ('tfidf', TfidfVectorizer(stop_words=stop_words)),
